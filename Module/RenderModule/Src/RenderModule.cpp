@@ -17,12 +17,12 @@ uint32_t RenderModule::cacheSize = 0;
 std::array<std::unique_ptr<IResource>, RenderModule::MAX_RESOURCE_SIZE> RenderModule::cache;
 
 /**
- * @brief OpenGLì˜ ë²„ì „ì…ë‹ˆë‹¤.
+ * @brief OpenGLÀÇ ¹öÀüÀÔ´Ï´Ù.
  *
- * @note ì´ ê°’ì€ 4.6ìœ¼ë¡œ ê³ ì •ë˜ì–´ ìˆìŠµë‹ˆë‹¤.
+ * @note ÀÌ °ªÀº 4.6À¸·Î °íÁ¤µÇ¾î ÀÖ½À´Ï´Ù.
  */
-#define FIX_OPENGL_MAJOR_VERSION 4 // OpenGL ì£¼(4) ë²„ì „ì…ë‹ˆë‹¤.
-#define FIX_OPENGL_MINOR_VERSION 6 // OpenGL ë¶€(6) ë²„ì „ì…ë‹ˆë‹¤.
+#define FIX_OPENGL_MAJOR_VERSION 4 // OpenGL ÁÖ(4) ¹öÀüÀÔ´Ï´Ù.
+#define FIX_OPENGL_MINOR_VERSION 6 // OpenGL ºÎ(6) ¹öÀüÀÔ´Ï´Ù.
 
 RenderModule::Errors RenderModule::Init(HWND windowHandle)
 {
@@ -350,7 +350,7 @@ RenderModule::Errors RenderModule::SetupWGLExtensions()
 		return Errors::ERR_WIN;
 	}
 
-	// WM_DESTROY ë©”ì‹œì§€ë¥¼ ì „ì†¡í•˜ì§€ë§Œ, Platform ëª¨ë“ˆì—ì„œ ë¬´ì‹œí•˜ë„ë¡ êµ¬í˜„...
+	// WM_DESTROY ¸Ş½ÃÁö¸¦ Àü¼ÛÇÏÁö¸¸, Platform ¸ğµâ¿¡¼­ ¹«½ÃÇÏµµ·Ï ±¸Çö...
 	if (!DestroyWindow(dummyWindow))
 	{
 		SetLastWindowsErrorMessage();
