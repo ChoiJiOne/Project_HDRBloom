@@ -83,6 +83,19 @@ public:
 
 
 	/**
+	 * @brief 프레임 버퍼의 크기를 얻습니다.
+	 * 
+	 * @param outWidth 프레임 버퍼의 가로 크기입니다.
+	 * @param outHeight 프레임 버퍼의 세로 크기입니다.
+	 */
+	void GetSize(uint32_t& outWidth, uint32_t& outHeight)
+	{
+		outWidth = width_;
+		outHeight = height_;
+	}
+
+
+	/**
 	 * @brief 한 프레임버에서 다른 프레임 버퍼로 복사를 수행합니다.
 	 * 
 	 * @param src 원복 프레임 버퍼입니다.
