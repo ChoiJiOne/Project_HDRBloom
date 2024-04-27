@@ -14,6 +14,8 @@ int32_t WINAPI wWinMain(_In_ HINSTANCE hInstance, _In_opt_ HINSTANCE hPrevInstan
 	RenderModule::Init(PlatformModule::GetWindowHandle());
 
 	PlatformModule::SetEndLoopCallback([&]() { RenderModule::Uninit(); });
+	RenderModule::SetDepthMode(false);
+	RenderModule::SetPointSizeMode(true);
 
 	PlatformModule::RunLoop(
 		[&](float deltaSeconds)
