@@ -12,7 +12,7 @@ class FrameBuffer : public IResource
 {
 public:
 	/**
-	 * @brief 프레임 버퍼의 생성자입니다.
+	 * @brief 멀티 샘플링 기능이 비활성화된 프레임 버퍼의 생성자입니다.
 	 *
 	 * @param bufferWidth 프레임 버퍼의 가로 크기입니다.
 	 * @param bufferHeight 프레임 버퍼의 세로 크기입니다.
@@ -21,7 +21,7 @@ public:
 
 
 	/**
-	 * @brief 프레임 버퍼의 생성자입니다.
+	 * @brief 멀티 샘플링 기능이 활성화된 프레임 버퍼의 생성자입니다.
 	 *
 	 * @param bufferWidth 프레임 버퍼의 가로 크기입니다.
 	 * @param bufferHeight 프레임 버퍼의 세로 크기입니다.
