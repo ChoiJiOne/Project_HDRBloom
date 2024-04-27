@@ -23,10 +23,10 @@ int32_t WINAPI wWinMain(_In_ HINSTANCE hInstance, _In_opt_ HINSTANCE hPrevInstan
 	RenderModule::SetAlphaBlendMode(true);
 
 	GeometryRenderer2D* renderer = RenderModule::CreateResource<GeometryRenderer2D>();
-	renderer->SetOrtho(Mat4x4::Ortho(0.0f, static_cast<float>(windowParam.w), static_cast<float>(windowParam.h), 0.0f, -1.0f, 1.0f));
+	renderer->SetOrtho(RenderModule::GetScreenOrtho());
 
 	TextRenderer2D* textRenderer = RenderModule::CreateResource<TextRenderer2D>();
-	textRenderer->SetOrtho(Mat4x4::Ortho(0.0f, static_cast<float>(windowParam.w), static_cast<float>(windowParam.h), 0.0f, -1.0f, 1.0f));
+	textRenderer->SetOrtho(RenderModule::GetScreenOrtho());
 
 	TTFont* font = RenderModule::CreateResource<TTFont>("Resource/Font/SeoulNamsanEB.ttf", 0x00, 0x127, 64.0f);
 	
@@ -34,8 +34,8 @@ int32_t WINAPI wWinMain(_In_ HINSTANCE hInstance, _In_opt_ HINSTANCE hPrevInstan
 		[&](float deltaSeconds)
 		{
 			RenderModule::BeginFrame(0.0f, 0.0f, 0.0f, 1.0f);
-
-			textRenderer->DrawText2D(font, L"Hello, World", Vec2f(500.0f, 400.0f), Vec4f(1.0f, 0.0f, 0.0f, 1.0f));
+			renderer->DrawWireframeRectangle2D(Vec2f(500.0f, 400.0f), 300.0f, 100.0f, 0.0f, Vec4f(1.0f, 0.0f, 0.0f, 1.0f));
+			textRenderer->DrawText2D(font, L"Bloom!", Vec2f(500.0f, 400.0f), Vec4f(1.0f, 0.0f, 0.0f, 1.0f));
 
 			RenderModule::EndFrame();
 		}
