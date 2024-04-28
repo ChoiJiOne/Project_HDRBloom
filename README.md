@@ -4,4 +4,5 @@
 
 
 ## 참고 자료
+- [LearnOpenGL - HDR](https://learnopengl.com/Advanced-Lighting/HDR)
 - [LearnOpenGL - Bloom](https://learnopengl.com/Advanced-Lighting/Bloom)
