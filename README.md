@@ -115,6 +115,15 @@ Package_MinSizeRel.bat
 <br><br>
 
 
+## Bloom Effect Rendering Process
+
+블룸(Bloom) 효과를 그리는 과정은 아래와 같습니다.
+
+![BloomProcess](./Image/BloomProcess.png)
+
+<br><br>
+
+
 ## 참고 자료
 - [LearnOpenGL - HDR](https://learnopengl.com/Advanced-Lighting/HDR)
 - [LearnOpenGL - Bloom](https://learnopengl.com/Advanced-Lighting/Bloom)
