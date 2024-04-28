@@ -1,5 +1,5 @@
 # Project - HDRBloom
-- HDR 블룸(Bloom) 효과 구현 프로젝트입니다.
+- HDR 블룸(Bloom) 효과를 구현하는 프로젝트의 `0.0`입니다.
 <br><br>
 
 
