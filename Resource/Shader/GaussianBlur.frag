@@ -34,5 +34,5 @@ void main()
         }
     }
 
-    outFragColor = vec4(fragRGB, alpha);
+    outFragColor = vec4(fragRGB, 1.0f);
 }
